@@ -1,0 +1,131 @@
+
+/* FOOTER STYLES */
+footer {
+    /* position: absolute;
+    bottom: 0; */
+    /* max-width: 1200px; */
+    /* margin: 0 auto; */
+    /* background-color: #b32728; */
+    display: grid;
+    padding: 2rem 2rem 0 2rem;
+    grid-template-rows: 1fr 50px;
+    row-gap: 1rem;
+    background-color: #b32728;
+}
+
+
+/* MAIN CONTAINER STYLES */
+.main-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 4rem;
+}
+
+/* LEFT AND RIGHT CONTAINER STYLES */
+.left,
+.right {
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    row-gap: 1rem;
+}
+
+/* LEFT CONTENT STYLES */
+.left_content {
+    display: grid;
+    grid-template-rows: 1fr 50px;
+    gap: 1.5rem;
+}
+
+/* FIRST LIST ITEMS STYLES */
+.left_list li:first-child,
+.right_left_list li:first-child {
+    margin-bottom: 1rem;
+}
+
+/* LIST CONTAINER STYLES */
+.left_content .list_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+/* LEFT CONTENT GAP STYLES */
+.left_content {
+    gap: 1.5rem;
+}
+
+/* FLEX ALIGN CENTER STYLES */
+.left h3,
+.right h3,
+.gsm_mail,
+.cpr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* GSM MAIL LINK STYLES */
+.gsm_mail a {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* STRIKETHROUGH STYLES */
+s {
+    color: #000;
+}
+
+/* TEXT COLOR STYLES */
+.left_list li,
+.left_list li a,
+.right_left_list li,
+.right_left_list a,
+.left h2,
+.right h2,
+.gsm_mail a,
+.cpr,
+.right_list a {
+    color: #fff;
+}
+
+/* OTHER */
+.cpr{
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .left h2,
+    .right h2{
+        font-size: 18px;
+    }
+
+    .left_list li,
+    .left_list li a,
+    .right_left_list li,
+    .right_left_list a,
+    .gsm_mail a,
+    .cpr,
+    .right_list a{
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    footer{
+        padding: 2rem 2rem 1.5rem 2rem;
+    }
+    .main-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto; 
+        /* row-gap: 1rem; */
+    }
+    
+
+    .left_content{
+        display: grid;
+        gap: 0;
+    }
+}
