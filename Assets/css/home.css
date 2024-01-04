@@ -1,0 +1,371 @@
+/* carroussel */
+
+.carousel-container {
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+    z-index: -10;
+}
+
+.carousel-section h1{
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    padding: 0 4rem;
+    position : relative;
+}
+
+.slide:first-child{
+    justify-content: flex-start;
+}
+
+.slide:nth-child(2){
+    justify-content: flex-end;
+}
+
+.slide:nth-child(3){
+    justify-content: flex-start;
+}
+
+.slide:nth-child(4){
+    justify-content: flex-end;
+}
+
+/* .overlay {
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 60vh;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.589);
+} */
+
+
+.slide:first-child, .slide:nth-child(2), .slide:nth-child(3),.slide:nth-child(4){   
+    /* background-image: url('../../src/uploads/fond_slide.jpg'); */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.slide:first-child{
+    background-image: url('https://img.freepik.com/photos-premium/engrenages-boite-vitesses-arriere-plan-industriel_263512-1453.jpg?size=626&ext=jpg');   
+}
+
+.slide:nth-child(2){
+    background-image: url('https://img.freepik.com/photos-gratuite/vue-interieure-acierie_1359-184.jpg?w=1380&t=st=1701681281~exp=1701681881~hmac=b9726bad962fdab3f33b72eb641f145d7f4a7f29883956c2a011eff224c0a255');
+}
+
+
+
+.slide:nth-child(3){
+    background-image: url('https://img.freepik.com/photos-gratuite/portrait-jeune-travailleur-dans-casque-dans-grande-usine-recyclage-dechets_146671-19569.jpg?size=626&ext=jpg&ga=GA1.1.1880011253.1699833600&semt=ais');
+}
+
+
+.slide:nth-child(4){
+    background-image: url('https://img.freepik.com/photos-gratuite/gros-plan-carte-circuit-electronique-microprogramme-electronique-composants-electroniques_1387-746.jpg?size=626&ext=jpg&ga=GA1.1.613942049.1698063824&semt=ais');
+}
+
+.slide-img-container, .content-slider{
+    z-index: .5;
+}
+
+.content-slider{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    max-width: 600px ;
+    height: auto;
+    border-radius: 5px;
+}
+
+.content-slider h1{
+    color:  #b32728;
+    margin-bottom: 1rem;
+    font-size: 1.5em;
+}
+
+.content-slider ul > li {
+    list-style-type: square;
+    margin-left: 30px;
+}
+
+.content-slider ul > li, .content-slider > p{
+    line-height: 1.5rem;
+}
+
+
+/* fin carrousel */
+
+
+.gsm{
+    max-width: 1200px;
+    margin: 4rem auto;
+}
+
+.gsm h1{
+    font-size: 5em;
+    text-align: center;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.gsm h1 span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px black;
+}
+
+.gsm h1::after{
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 20%;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #b32728;
+    border-radius: 16px;
+    z-index: -1;
+}
+
+.gsm p{
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.2em;
+    color: #444;
+    /* line-height: 2.5rem; */
+
+}
+
+/* SEC */
+
+.sec{
+    margin-top: 2rem;
+    padding: 2rem;
+    /* 
+    max-width: 1200px;
+    margin: 0 auto; */
+}
+
+.sec h2{
+    text-align: center;
+    font-size: 2em;
+    position: relative;
+}
+
+.sec h2::after{
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 20%;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #b32728;
+    border-radius: 16px;
+}
+
+.sec .metiers{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    margin: 5rem auto 5rem auto;
+    max-width: 1200px;
+    /* background-color: #b32728; */
+}
+
+.sec .metiers figure{
+    border: 1px solid #b32728;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color : #444;
+    font-size: 120%;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.sec .metiers figure img{
+    margin-bottom: 100rem;
+}
+
+.sec .metiers figure figcaption{
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.sec .metiers figure img{
+    width: 32px;
+    height: 32px;
+}
+
+.sec .metiers figure:hover{
+    box-shadow: 4px 4px 16px rgba(0,0,0);
+}
+
+/* 
+.cta{
+    background-color: #b32728;
+    padding: 100px 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.cta h2{
+    color: #fff;
+    font-size: 2em;
+}
+
+.cta .cta-buttons{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+
+.cta .cta-buttons a{
+    border: 1px solid orange;
+    text-align: center;
+    padding: 1rem .5rem;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.4s ease-in-out;
+    z-index: 1;
+}
+
+
+
+.cta .cta-buttons a::after{
+    background: orange;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    z-index: -1;    
+    transition: width 0.3s ease-in-out;
+}
+
+.cta .cta-buttons a:hover::after{
+    width: 0%;
+} */
+
+.sdem{
+    margin-top: 4rem;
+}
+
+.sdem h2{
+    text-align: center;
+    font-size: 2em;
+    position: relative;
+}
+
+.sdem h2::after{
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 20%;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #b32728;
+    border-radius: 16px;
+}
+
+.card-container{
+    max-width: 1200px;
+    margin: 4rem auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+
+.card-container .card{
+    padding: 1rem;
+    border : 1px solid #ddd;
+}
+
+.card-container .card-header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card-container .card-header img{
+    width: 64px;
+    height: 64px;
+    margin-right: 1rem;
+}
+
+.card-container .card p{
+    line-height: 2rem;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .gsm h1{
+        font-size: 2em;
+        text-align: center;
+        position: relative;
+        margin-bottom: 2rem;
+    }
+
+    .sec .metiers{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 2rem;
+    }
+
+
+    .cta{
+        display: grid;
+        grid-template-rows: repeat(1,1fr);
+        padding: 2rem;
+    }
+
+    .cta h2{
+        margin-bottom: 2rem;
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    .cta .cta-buttons{
+        display: flex;
+        flex-direction: column;
+    }
+    .cta .cta-buttons a {
+        font-size: 1em;
+    }
+
+    .card-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

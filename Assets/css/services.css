@@ -1,0 +1,111 @@
+.s-header{
+    height: 300px;
+    background-image: url("https://img.freepik.com/free-photo/business-people-brainstorming-ideas-plan-work-report-with-data-charts-graphs-analyzing-research-information-create-successful-project-office-partnership-collaboration_482257-47596.jpg?w=826&t=st=1701853422~exp=1701854022~hmac=a7d8846f51a3a9f3ca36fe27e22bd6e7a2ba3d8d2fa50ed42505a08d384c99cd");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+
+}
+
+.s-header h1{
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+.s-presentation{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.s-presentation p{
+    margin-bottom: 1rem;
+}
+
+.s-presentation p:nth-child(5) a  {
+    color : var(--secondary-color);
+    font-weight: 700;
+}
+
+.services{
+    margin: 3rem 0;
+}
+
+.services h2{
+    text-align: center;
+}
+.s-cards-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    border: 1px solid var(--border-color);
+    /* padding: 1rem;  */
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.image-card{
+    background: url("https://img.freepik.com/vecteurs-libre/illustration-icone-galerie_53876-27002.jpg?size=626&ext=jpg&ga=GA1.1.106783804.1701858349&semt=ais");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-right: 1px solid var(--border-color);
+
+}
+
+.content-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content-card h3{
+    color: var(--main-color);
+}
+
+.content-card a {
+    background-color:var(--secondary-color);
+    padding: .5rem 1rem;
+    color: #fff;
+    border-radius: 4px;
+    float: right;
+    transition: all .5s ease;
+}
+
+.content-card a:hover{
+    background-color: var(--secondary-color);
+}
+
+.content-card-elment{
+    margin: 20px 0;
+}
+
+.see-more{
+    padding-right: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+
+    .s-header h1{
+        color:#fff;
+        text-transform: uppercase;
+        font-size: 2rem;
+    }
+    .card {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    .image-card{
+        display: none;
+    }
+}
